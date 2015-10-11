@@ -1,2 +1,126 @@
-@require "style.styl"
-@require "./bower_components/skeleton/css/skeleton.css"
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+@import 'nib'
+
+@import 'style.styl'
+@import './bower_components/skeleton/css/skeleton.css'
+
+light-gray = #f1f4f9
+light-blue = #46A4DA
+
+mobile-breakpoint = 1024px
+
+hide-desktop()
+  @media screen and (min-width mobile-breakpoint)
+    display none
+
+hide-mobile()
+  @media screen and (max-width mobile-breakpoint)
+    display none
+
+body
+  font-size 2em
+  font-family 'Raleway', sans-serif
+
+a:visited, a
+  color light-blue
+  text-decoration none
+
+a:hover
+  color #68C6FC
+
+.body--menu-opened
+  @media screen and (max-width mobile-breakpoint)
+    overflow hidden
+
+.site-header
+  background-color light-gray
+  margin-bottom 50px
+
+  .menu
+    float right
+
+    font-size 21px
+    margin-top 100px
+
+    li
+      margin-right 20px
+
+$menu-overlay
+  width 100%
+  height 200%
+  background-color light-blue
+  position fixed
+  top 0
+  padding 10px
+
+  transition visibility 0.5s, opacity 0.5s linear
+
+  a
+    color white
+    font-size 36px
+    line-height 1.0
+
+  a:hover
+    color #f1f4f9
+
+  .menu, .menu-menu-1-container
+    height 100%
+
+  ul
+    min-height 100%
+    height 0
+
+    &::before
+      display block
+      height 20%
+      content ' '
+
+  li
+    min-height calc(80% / 7)
+    padding-bottom 10px
+    width 100%
+    text-align center
+
+.menu-overlay
+  &--open
+    @extends $menu-overlay
+    overflow-y auto
+    visibility visible
+    opacity 0.9
+    hide-desktop()
+
+  &--closed
+    @extends $menu-overlay
+    visibility hidden
+    opacity 0
+
+  &__navigation
+    height 50%
+    overflow-y auto
+
+.menu-row
+  &__logo
+    float left
+    width 35%
+    @media screen and (max-width mobile-breakpoint)
+      width 65%
+
+  &__navigation
+    float right
+    width 65%
+    hide-mobile()
+
+  &__button
+    user-select none
+    position absolute
+    top 40px
+    right 10%
+    z-index 99
+    font-size 46px
+    color light-blue
+    cursor pointer
+    hide-desktop()
+
+    .fa-close
+      color white

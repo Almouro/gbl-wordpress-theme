@@ -1,0 +1,28 @@
+{
+  "name": "gbl-wordpress-theme",
+  "version": "0.0.1",
+  "description": "A wordpress theme for http://gbl.gbu.fr",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Almouro/gbl-wordpress-theme.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "GBL",
+    "GBU"
+  ],
+  "author": "Almouro <contact@almouro.com> (almouro.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Almouro/gbl-wordpress-theme/issues"
+  },
+  "homepage": "https://github.com/Almouro/gbl-wordpress-theme#readme",
+  "dependencies": {
+    "bower": "^1.6.5",
+    "nib": "^1.1.0",
+    "stylus": "^0.52.4"
+  }
+}
