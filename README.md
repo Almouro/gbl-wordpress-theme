@@ -1,18 +1,19 @@
 # Wordpress Theme for the new GBL website (http://wp-gbl.gbu.fr/)
 
-See http://vccw.cc/ to install local Wordpress environment with Vagrant.
+## Installation
 
-Install dependencies:
+See http://vccw.cc/ to install local Wordpress environment with Vagrant.
 ```
 npm install
 ```
 
-Compile styles:
+Then run
 ```
-stylus < main.styl > style.css --include node_modules/nib/lib --include-css
+npm start
 ```
+Your stylus will automatically be compiled into CSS every time you change a file.
 
-Deploy:
+## Deployment
 ```
 scp -r ../gbl-wordpress-theme amoureaux@gbu.fr:~/gbl-wordpress-theme
 ```
@@ -25,4 +26,4 @@ cd /space/squeeze/home/gbu-clone/wp-gbl/wp-content/themes && rm -rf gbl-wordpres
 
 ## To Do:
 * [ ] Deploy with Capistrano / Shipit / ...
-* [ ] Create gulpfile
+* [x] Create gulpfile
