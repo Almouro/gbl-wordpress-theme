@@ -14,16 +14,12 @@ npm start
 Your stylus will automatically be compiled into CSS every time you change a file.
 
 ## Deployment
-```
-scp -r ../gbl-wordpress-theme amoureaux@gbu.fr:~/gbl-wordpress-theme
-```
 
-Then install it on the server:
+Check that your stylus has been compiled, then run:
 ```
-ssh amoureaux@gbu.fr
-cd /space/squeeze/home/gbu-clone/wp-gbl/wp-content/themes && rm -rf gbl-wordpress-theme && mv ~/gbl-wordpress-theme .
+npm run deploy
 ```
 
 ## To Do:
-* [ ] Deploy with Capistrano / Shipit / ...
+* [x] Full deploy script
 * [x] Create gulpfile

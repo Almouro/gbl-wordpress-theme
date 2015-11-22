@@ -4,7 +4,8 @@
   "description": "A wordpress theme for http://gbl.gbu.fr",
   "scripts": {
     "start": "gulp",
-    "postinstall": "bower install && gulp build"
+    "postinstall": "bower install && gulp build",
+    "deploy": "mv node_modules .. && mv bower_components .. && scp -r ../gbl-wordpress-theme amoureaux@gbu.fr:~/gbl-wordpress-theme && mv ../node_modules . && mv ../bower_components . && ssh amoureaux@gbu.fr 'cd /space/squeeze/home/gbu-clone/wp-gbl/wp-content/themes && rm -rf gbl-wordpress-theme && mv ~/gbl-wordpress-theme .'"
   },
   "repository": {
     "type": "git",
