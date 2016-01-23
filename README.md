@@ -17,11 +17,6 @@ Your stylus will automatically be compiled into CSS every time you change a file
 
 Check that your stylus has been compiled, then run
 
-To deploy to http://wp-gbl.gbu.fr
-```
-npm run deploy:wp
-```
-
 To deploy to http://clone-gbl.gbu.fr
 ```
 npm run deploy:clone

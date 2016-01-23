@@ -39,7 +39,7 @@
 		<div class='row menu-row'>
 			<div class='menu-row__logo'>
 				<a href='/'>
-					<img src='http://wp-gbl.gbu.fr/wp-content/uploads/2015/10/logo-gbl.png' alt='Logo GBL'/>
+					<img src='http://gbl.gbu.fr/wp-content/uploads/2015/10/logo-gbl.png' alt='Logo GBL'/>
 				</a>
 			</div>
 
