@@ -4,7 +4,7 @@ var rename = require('gulp-rename');
 var nib = require('nib');
 
 gulp.task('stylus', function () {
-  gulp.src('./main.styl')
+  gulp.src('./styles/main.styl')
     .pipe(stylus({
       'include css': true,
       use: nib(),
@@ -14,7 +14,7 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('*.styl', ['stylus']);
+  gulp.watch('styles/*.styl', ['stylus']);
 });
 
 gulp.task('build', ['stylus']);
